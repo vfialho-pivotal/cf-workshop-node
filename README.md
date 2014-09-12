@@ -38,7 +38,7 @@ If you are running the application locally, install MongoDB, and create a databa
 
 ###Seeding data
 
-The application will check for existing data, and seed sample data if necessary as part of start up.  This is done in `mongo.js`, in the `mongoose.connection.on('open', function(){}` function.
+The application will check for existing data, and seed sample data if necessary as part of start up.  This is done in `mongo.js`, in the `mongoose.connection.on('open', function(){})` function.
 
 ###Bundling node modules
 
