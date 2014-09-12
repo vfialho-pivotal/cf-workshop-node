@@ -42,7 +42,7 @@ The Node modules can be bundled within the application itself, as a result of ru
 
 ###Pushing / Running
 
-Once the MongoDB service or instance is created and the manifest and `app.js` are updated, simply push or run this application.  If running on Cloud Foundry:
+Once the MongoDB service or instance is created and the manifest and `mongo.js` are updated, simply push or run this application.  If running on Cloud Foundry:
 
     cf push
 
