@@ -15,7 +15,7 @@ CF:
  * Health manager and application restart
 
 Services, Packaging, and Deploying
---------------------------------
+----------------------------------
 
 ###MongoDB Service
 
@@ -38,7 +38,7 @@ If you are running the application locally, install MongoDB, and create a databa
 
 ###Seeding data
 
-There is a file called `data.json` that can be used as sample data.  Import this data with the MongoDB client of your choice (mongo, mongoimport, etc.).
+The application will check for existing data, and seed sample data if necessary as part of start up.  This is done in `mongo.js`, in the `mongoose.connection.on('open', function(){}` function.
 
 ###Bundling node modules
 
