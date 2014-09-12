@@ -20,7 +20,9 @@ var attendeeSchema = new mongoose.Schema({
 var attendee = mongoose.model('Attendee', attendeeSchema);
 
 var vcap_services = JSON.parse(process.env.VCAP_SERVICES || '{}');
-var uri = vcap_services != undefined && vcap_services.mongolab != undefined ? vcap_services.mongolab[0].credentials.uri : 'localhost:27017/cf-workshop-node';
+//Change this to your service type name
+var serviceTypeName = 'p-mongodb';
+var uri = vcap_services != undefined && vcap_services[serviceTypeName] != undefined ? vcap_services[serviceTypeName][0].credentials.uri : 'localhost:27017/cf-workshop-node';
 
 mongoose.connect(uri, function(err, res) {
 	if (err) {
